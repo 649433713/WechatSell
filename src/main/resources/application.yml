@@ -1,0 +1,40 @@
+spring:
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sell?serverTimezone=GMT%2b8&characterEncoding=utf8&useUnicode=true&useSSL=false
+    username: admin
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null
+#  redis:
+#    host: 127.0.0.1
+#    port: 6379
+server:
+  context-path: /sell
+
+
+#logging:
+#  pattern:
+#    console: "%d - %msg%n"
+#  file: sell.log
+#
+
+wechat:
+  mpAppId: wxc15deece0c4698ac
+  mpAppSecret: d4624c36b6795d1d99dcf0547af5443d
+  mchId: 1483469312
+  mchKey: 06C56A89949D617xxxxxxxxxxx
+  keyPath: /var/weixin_cert/h5.p12
+  notifyUrl: http://yinywf.s1.natapp.cc/sell/pay/notify
+  templateId:
+    orderStatus: e-Cqq67QxD6YNI41iRiqawEYdFavW_7pc7LyEMb-yeQ
+
+projectUrl:
+  wechatMpAuthorize: http://yinywf.s1.natapp.cc
+  wechatOpenAuthorize: http://yinywf.s1.natapp.cc
+  sell: http://yinywf.s1.natapp.cc
